@@ -48,11 +48,14 @@ vim.g.have_nerd_font = false
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
 --  Experiment for yourself to see if you like it!
--- vim.opt.relativenumber = true
+vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
@@ -246,6 +249,12 @@ require('lazy').setup({
     end,
   },
 
+  -- You can jump between hunks with [c and ]c. You can preview, stage, and undo hunks with <leader>hp, <leader>hs, and <leader>hu respectively.
+
+  --         With Neovim 0.3.2 or higher, you can turn line number highlighting on and off (defaults to off):
+  -- turn on with :GitGutterLineNrHighlightsEnable
+  -- turn off with :GitGutterLineNrHighlightsDisable
+  -- toggle with :GitGutterLineNrHighlightsToggle.
   { 'airblade/vim-gitgutter', requires = 'tpope/vim-fugitive' },
 
   -- NOTE: Plugins can specify dependencies.
@@ -519,7 +528,7 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        -- pyright = {},
+        pyright = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
