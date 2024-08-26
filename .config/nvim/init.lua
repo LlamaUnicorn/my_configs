@@ -40,9 +40,15 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+-- Map <leader>d to delete to the null register
+vim.api.nvim_set_keymap("n", "<leader>d", '"_d', { noremap = true, silent = true })
+vim.api.nvim_set_keymap("v", "<leader>d", '"_d', { noremap = true, silent = true })
 
+-- Set to true if you have a Nerd Font installed and selected in the terminal
+vim.g.have_nerd_font = true
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
