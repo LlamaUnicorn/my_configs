@@ -103,3 +103,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias copy_django_logs='scp -r edo_prod:/opt/extedu/django/logs /home/edo-admin/Documents/EDO/prod-logs'
+
+alias cd_obsidian='cd ~/Yandex.Disk/Documents/Obsidian/My\ Vault/'
+
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
