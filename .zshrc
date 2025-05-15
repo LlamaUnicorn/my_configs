@@ -106,6 +106,11 @@ alias copy_django_logs='scp -r edo_prod:/opt/extedu/django/logs /home/edo-admin/
 
 alias cd_obsidian='cd ~/Yandex.Disk/Documents/Obsidian/My\ Vault/'
 
+# Add timestamps to the history command. fc -li also shows history with stamps
+setopt EXTENDED_HISTORY
+HIST_STAMPS="yyyy-mm-dd"
+
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
+export PATH="$PATH:$HOME/go/bin"
